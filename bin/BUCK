@@ -1,0 +1,18 @@
+java_library (
+    name = 'BuckApp-lib',
+    srcs = glob(['src/**/*.java']),
+    source = '8',
+    target = '8',    
+    deps = [
+        
+    ],
+)
+
+java_binary (
+    name = 'BuckApp',
+    main_class = 'example.Main',
+    deps = [
+      ':BuckApp-lib',
+    ],
+    visibility = ['//visibility:public'],
+)
